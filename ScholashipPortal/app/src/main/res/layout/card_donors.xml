@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/avt"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/icon_company"
+        android:layout_marginTop="15dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/companyname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Công ty Technology"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phường 2, Quận 5"
+            android:layout_below="@id/companyname"
+            android:padding="0dp"
+            android:layout_marginLeft="5dp"/>
+
+        <Button
+            android:id="@+id/btnxem"
+            android:layout_width="65dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/address"
+            android:textSize="8dp"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:background="@drawable/custom_buttom"
+            android:textColor="#16ABE0"
+            android:padding="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:text="Xem"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
