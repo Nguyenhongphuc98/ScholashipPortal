@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InforFragment"
+    android:orientation="vertical"
+    >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:src="@drawable/cover"
+            android:scaleType="centerCrop"
+            android:paddingTop="40dp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:id="@+id/container">
+
+            <TextView
+                app:layout_constraintLeft_toLeftOf="@id/container"
+                app:layout_constraintBottom_toTopOf="@id/displayname"
+                android:text="University Of Information Technology"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/displayname"
+                app:layout_constraintLeft_toLeftOf="@id/container"
+                app:layout_constraintBottom_toBottomOf="@id/container"
+                android:text="Nguyễn Hồng Ngọc"
+                android:layout_width="wrap_content"
+                android:textColor="#fff"
+                android:textSize="25sp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="2"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:background="@drawable/count_scholar_background"
+                app:layout_constraintRight_toRightOf="@id/container"
+                app:layout_constraintBottom_toBottomOf="@id/container"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/infor_item"
+                android:id="@+id/education"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/education_header"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/education"
+                    app:layout_constraintLeft_toLeftOf="@id/education">
+
+                    <ImageView
+                        android:id="@+id/edu_icon"
+                        app:layout_constraintTop_toTopOf="@+id/topbar"
+                        app:layout_constraintLeft_toLeftOf="@id/topbar"
+                        android:layout_width="20dp"
+                        android:src="@drawable/icon_education"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HỌC VẤN"
+                        android:textStyle="bold"
+                        android:textColor="#3F3F3F"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/edu_icon"
+                        app:layout_constraintTop_toTopOf="@id/topbar"/>
+
+
+                    <ImageView
+                        android:id="@+id/edu_expan_icon"
+                        app:layout_constraintRight_toRightOf="@id/topbar"
+                        app:layout_constraintTop_toTopOf="@id/topbar"
+                        android:layout_width="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_green"
+                        android:layout_height="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/eduitem1"
+                    app:layout_constraintTop_toBottomOf="@id/topbar"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#325"
+                        android:text="Đại học/ Cao đẳng"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="2016-2021"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Đại học Cambridge"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="GPA: 4.5"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divinitem"
+                    app:layout_constraintTop_toBottomOf="@id/eduitem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c4c4c4"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/eduitem2"
+                    app:layout_constraintTop_toBottomOf="@id/divinitem"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#325"
+                        android:text="Đại học/ Cao đẳng"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="2016-2021"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Đại học Cambridge"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/infor_item"
+                android:id="@+id/award"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topbar_award"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/education_header"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/award"
+                    app:layout_constraintLeft_toLeftOf="@id/award">
+
+                    <ImageView
+                        android:id="@+id/awardicon"
+                        app:layout_constraintTop_toTopOf="@+id/topbar_award"
+                        app:layout_constraintLeft_toLeftOf="@id/topbar_award"
+                        android:layout_width="20dp"
+                        android:src="@drawable/icon_award"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THÀNH TÍCH"
+                        android:textStyle="bold"
+                        android:textColor="#3F3F3F"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/awardicon"
+                        app:layout_constraintTop_toTopOf="@id/topbar_award"/>
+
+
+                    <ImageView
+                        android:id="@+id/award_expan_icon"
+                        app:layout_constraintRight_toRightOf="@id/topbar_award"
+                        app:layout_constraintTop_toTopOf="@id/topbar_award"
+                        android:layout_width="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_green"
+                        android:layout_height="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/awarditem1"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/topbar_award"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="07/2018"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Huy chương vàng toán quốc tế"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/awardivitem2"
+                    app:layout_constraintTop_toBottomOf="@id/awarditem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c4c4c4"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/awarditem2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/awardivitem2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="03/2017"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Ielts 8.5"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/awarddivitem3"
+                    app:layout_constraintTop_toBottomOf="@id/awarditem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c4c4c4"
+                    />
+                <LinearLayout
+                    android:id="@+id/awarditem3"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/awarditem2"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="05/2015"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:text="Top 10 hoa hậu thế giới"/>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/infor_item"
+                android:id="@+id/info"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topbar_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/education_header"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/info"
+                    app:layout_constraintLeft_toLeftOf="@id/info">
+
+                    <ImageView
+                        android:id="@+id/infoicon"
+                        app:layout_constraintTop_toTopOf="@+id/topbar_info"
+                        app:layout_constraintLeft_toLeftOf="@id/topbar_info"
+                        android:layout_width="20dp"
+                        android:src="@drawable/icon_info"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THÔNG TIN CÁ NHÂN"
+                        android:textStyle="bold"
+                        android:textColor="#3F3F3F"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/infoicon"
+                        app:layout_constraintTop_toTopOf="@id/topbar_info"/>
+
+
+                    <ImageView
+                        android:id="@+id/infoexpanicon"
+                        app:layout_constraintRight_toRightOf="@id/topbar_info"
+                        app:layout_constraintTop_toTopOf="@id/topbar_info"
+                        android:layout_width="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_green"
+                        android:layout_height="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/infoitem1"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/topbar_info"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#452"
+                        android:text="Thông tin cơ bản"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Ngày sinh: 24/12/1998"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Giới tính: Nữ"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Địa chỉ: 23 Võ Văn Tần, Quận 3"/>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/infodivitem"
+                    app:layout_constraintTop_toBottomOf="@id/infoitem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#c4c4c4"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/infoitem2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/infodivitem"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#452"
+                        android:text="Thông tin liên hệ"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/icon_phone"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#1C1A1A"
+                            android:layout_marginLeft="5dp"
+                            android:text="0366272703"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/icon_email"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#1C1A1A"
+                            android:layout_marginLeft="5dp"
+                            android:text="hongngocnguyen@gmail.com"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/infor_item"
+                android:id="@+id/intro"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/topbar_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/education_header"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    app:layout_constraintTop_toTopOf="@+id/intro"
+                    app:layout_constraintLeft_toLeftOf="@id/intro">
+
+                    <ImageView
+                        android:id="@+id/introicon"
+                        app:layout_constraintTop_toTopOf="@+id/topbar_intro"
+                        app:layout_constraintLeft_toLeftOf="@id/topbar_intro"
+                        android:layout_width="20dp"
+                        android:src="@drawable/icon_intro"
+                        android:layout_height="20dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TỰ GIỚI THIỆU"
+                        android:textStyle="bold"
+                        android:textColor="#3F3F3F"
+                        android:layout_marginLeft="10dp"
+                        app:layout_constraintLeft_toRightOf="@id/introicon"
+                        app:layout_constraintTop_toTopOf="@id/topbar_intro"/>
+
+
+                    <ImageView
+                        android:id="@+id/intro_expan_icon"
+                        app:layout_constraintRight_toRightOf="@id/topbar_intro"
+                        app:layout_constraintTop_toTopOf="@id/topbar_intro"
+                        android:layout_width="20dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_down_green"
+                        android:layout_height="20dp"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/introitem"
+                    android:paddingBottom="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/topbar_intro"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#1C1A1A"
+                        android:text="Tôi có một niềm yêu thích mạnh mẽ trong ngành ngân hàng và các dịch vụ tài chính. Lý do là tôi muốn tận dụng những mục tiêu chi tiết của tôi và áp dụng các kỹ năng và kiến thức mà tôi đã đạt được trong suốt khóa học của mình vào công việc."/>
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:text="Sửa hồ sơ"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:background="@drawable/button_green_corner"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

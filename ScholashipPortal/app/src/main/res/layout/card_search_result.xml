@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/itemScholaship"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:background="@drawable/boder_green">
+
+
+    </View>
+
+    <TextView
+        android:layout_marginLeft="230dp"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@drawable/tag_yellow_green"
+        android:textAlignment="center"
+        android:textColor="@color/yellow_green"
+        android:text="New"/>
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/boder_brown"
+        android:src="@drawable/icon_itun"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="11dp"/>
+
+
+
+    <TextView
+        android:id="@+id/nameScholaship"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ươm mầm trí tuệ"/>
+
+    <TextView
+        android:id="@+id/typeScholaship"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/nameScholaship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Du học Nhật Bản"/>
+
+    <TextView
+        android:id="@+id/deadlineScholaship"
+        android:layout_marginLeft="70dp"
+        android:layout_below="@id/typeScholaship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20/12/2019"/>
+</RelativeLayout>

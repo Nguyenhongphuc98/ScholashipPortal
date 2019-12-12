@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddEducationFragment"
+    android:id="@+id/container">
+
+    <LinearLayout
+        android:id="@+id/headerbar"
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintLeft_toLeftOf="@id/container"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#16ABE0"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Điền hồ sơ     "
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/popup"
+        app:layout_constraintTop_toBottomOf="@id/headerbar"
+        app:layout_constraintLeft_toLeftOf="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="25dp"
+        android:layout_margin="25dp"
+        android:elevation="1dp"
+        android:background="@drawable/add_infor_item">
+
+        <TextView
+            android:id="@+id/hocvan"
+            app:layout_constraintTop_toTopOf="@id/popup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HỌC VẤN"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            app:layout_constraintTop_toTopOf="@id/popup"
+            app:layout_constraintRight_toRightOf="@id/popup"
+            android:layout_width="20dp"
+            android:text="1"
+            android:background="@drawable/button_green_corner"
+            android:textColor="#fff"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/chonhedaotao"
+            app:layout_constraintTop_toBottomOf="@id/hocvan"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint=" Chọn hệ đào tạo"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <ImageView
+            app:layout_constraintRight_toRightOf="@id/chonhedaotao"
+            app:layout_constraintTop_toTopOf="@id/chonhedaotao"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/icon_down_gray"/>
+
+        <TextView
+            android:id="@+id/from"
+            app:layout_constraintTop_toBottomOf="@id/chonhedaotao"
+            app:layout_constraintLeft_toLeftOf="@id/popup"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            android:text="Từ"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/from2016"
+            app:layout_constraintLeft_toRightOf="@id/from"
+            app:layout_constraintTop_toBottomOf="@id/chonhedaotao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:layout_marginLeft="20dp"
+            android:text="2016"/>
+
+        <ImageView
+            app:layout_constraintRight_toRightOf="@id/from2016"
+            app:layout_constraintTop_toTopOf="@id/from2016"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_right_gray"/>
+
+        <ImageView
+            app:layout_constraintLeft_toLeftOf="@id/from2016"
+            app:layout_constraintTop_toTopOf="@id/from2016"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_left_gray"/>
+
+
+
+
+        <TextView
+            android:id="@+id/to"
+            app:layout_constraintTop_toBottomOf="@id/from"
+            app:layout_constraintLeft_toLeftOf="@id/popup"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="22dp"
+            android:text="Đến"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/to2018"
+            app:layout_constraintLeft_toRightOf="@id/to"
+            app:layout_constraintTop_toBottomOf="@id/from2016"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:paddingRight="25dp"
+            android:paddingLeft="25dp"
+            android:layout_marginLeft="14dp"
+            android:text="2018"/>
+
+        <ImageView
+            app:layout_constraintRight_toRightOf="@id/to2018"
+            app:layout_constraintTop_toTopOf="@id/to2018"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_right_gray"/>
+
+        <ImageView
+            app:layout_constraintLeft_toLeftOf="@id/to2018"
+            app:layout_constraintTop_toTopOf="@id/to2018"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/icon_left_gray"/>
+
+
+
+        <EditText
+            android:id="@+id/tentochucdaotao"
+            app:layout_constraintTop_toBottomOf="@id/to"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint=" Tên tổ chức đào tạo"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/gpa"
+            app:layout_constraintTop_toBottomOf="@id/tentochucdaotao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:hint=" GPA"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/plus"
+            app:layout_constraintTop_toBottomOf="@id/gpa"
+            app:layout_constraintRight_toRightOf="@id/popup"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/icon_plus"/>
+
+        <Button
+            app:layout_constraintTop_toBottomOf="@id/plus"
+            app:layout_constraintLeft_toLeftOf="@id/popup"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:background="@drawable/button_green_corner"
+            android:text="Tiếp tục"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:layout_marginLeft="50dp"
+            android:layout_height="38dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:textColor="#fff"
+            android:background="@drawable/button_green_corner"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="2"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="3"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="4"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

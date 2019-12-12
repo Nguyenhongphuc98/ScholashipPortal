@@ -1,6 +1,7 @@
 package com.example.scholashipportal;
 
 
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import com.example.scholashipportal.adapter.DonorsAdaptor;
 import com.example.scholashipportal.adapter.ScholashipCardAdaptor;
 import com.example.scholashipportal.model.ScholashipCard;
 import com.mancj.materialsearchbar.MaterialSearchBar;
+import com.mancj.materialsearchbar.adapter.SuggestionsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,6 +77,19 @@ public class HomeFragment extends Fragment {
         linearLayoutManager2.setOrientation(LinearLayoutManager.HORIZONTAL);
         recyclerViewNew.setAdapter(scholashipCardAdaptor);
         recyclerViewNew.setLayoutManager(linearLayoutManager2);
+
+
+        searchBar.setSuggestionsClickListener(new SuggestionsAdapter.OnItemViewClickListener() {
+            @Override
+            public void OnItemClickListener(int position, View v) {
+                GlobalSuport.ReplaceFragment(new SearchResultFragment());
+            }
+
+            @Override
+            public void OnItemDeleteListener(int position, View v) {
+
+            }
+        });
 
         return view;
     }

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchResultFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="@color/green">
+
+        <ImageView
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:paddingRight="20dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Scholaship detail"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Học bổng tài năng trẻ 2019"
+                android:textStyle="bold"
+                 android:textColor="#000"
+                android:textSize="18sp"
+               />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="deadline: 20/11"
+                android:textColor="@color/orange"/>
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tag_yellow_green"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow_green"
+                    android:text="Thạc sỹ"/>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/tag_yellow_green"
+                    android:textAlignment="center"
+                    android:textColor="@color/yellow_green"
+                    android:text="Du học"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Giới thiệu"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Học bổng tài năng trẻ 2019 là học bổng dành cho những bạn sinh viên có thành tích xuất sắc trong học tập và nghiên cứu. Học bổng được thành lập năm 1999 bời Nguyễn Hồng Phúc. Hãy tham gia vào học bổng để được hỗ trợ không chỉ về học phí mà còn là cơ hội phát triển bản thân qua chương trình du học"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Yêu cầu"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/stick_list_item"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Có bằng ielts >=7.5"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/stick_list_item"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tốt nghiệp ĐH chính quy năm 2021"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quyền lợi"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/stick_list_item"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Học tập tại Mỹ bậc thạc sỹ 100% học phí"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:background="@drawable/stick_list_item"/>
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tham gia nghiên cứu cùng anh Phúc"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:nestedScrollingEnabled="true"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/scholaship1"/>
+
+                    <ImageView
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/scholaship2"/>
+
+                    <ImageView
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/scholaship1"/>
+
+                    <ImageView
+                        android:layout_margin="3dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/scholaship2"/>
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logo_company"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icon_company"/>
+
+                <TextView
+                    android:id="@+id/name_company"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/logo_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cty Hồng Phúc"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_below="@id/name_company"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/logo_company"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dẫn đầu về công nghệ 6G"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#c4c4c4"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/purple"
+                    android:background="@drawable/button_save"
+                    android:text="Save"/>
+
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/buttom_apply"
+                    android:textColor="#fff"
+                    android:text="Apply"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

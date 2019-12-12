@@ -11,12 +11,18 @@ import android.widget.FrameLayout;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.security.SecureRandom;
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
 
     private HomeFragment mHomeFragment;
+    private SearchResultFragment mSearchResulfFragment;
+    private ScholashipDetailFragment mScholashipDetailFragment;
+    private InforFragment mInfoFragment;
+    private AddEducationFragment mAddEduFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         getSupportActionBar().hide();
+        GlobalSuport.activity=this;
 
         mHomeFragment=new HomeFragment();
+        mSearchResulfFragment=new SearchResultFragment();
+        mScholashipDetailFragment=new ScholashipDetailFragment();
+        mInfoFragment=new InforFragment();
+        mAddEduFragment=new AddEducationFragment();
 
         MatchView();
         SetEventBottomNavBar();
@@ -45,16 +56,16 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.action_home:
                         ReplaceFragment(mHomeFragment);
                         return true;
-//                    case R.id.action_favorite:
-//                        ReplaceFragment(mInfoFragment);
-//                        return true;
-//                    case R.id.action_info:
-//                        ReplaceFragment(mCardScannerFragment);
-//                        return true;
-//
-//                    case R.id.action_explore:
-//                        ReplaceFragment(mCardScannerFragment);
-//                        return true;
+                    case R.id.action_favorite:
+                        ReplaceFragment(mSearchResulfFragment);
+                        return true;
+                    case R.id.action_info:
+                        ReplaceFragment(mInfoFragment);
+                        return true;
+
+                    case R.id.action_explore:
+                        ReplaceFragment(mAddEduFragment);
+                        return true;
                 }
                 return false;
             }

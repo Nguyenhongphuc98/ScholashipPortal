@@ -11,7 +11,9 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.scholashipportal.GlobalSuport;
 import com.example.scholashipportal.R;
+import com.example.scholashipportal.ScholashipDetailFragment;
 import com.example.scholashipportal.model.ScholashipCard;
 
 import java.util.List;
@@ -52,7 +54,7 @@ public class ScholashipCardAdaptor extends
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"go to detail",Toast.LENGTH_LONG).show();
+                GlobalSuport.ReplaceFragment(new ScholashipDetailFragment());
             }
         });
     }
