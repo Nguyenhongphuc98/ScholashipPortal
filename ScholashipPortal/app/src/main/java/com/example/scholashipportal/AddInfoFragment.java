@@ -15,11 +15,12 @@ import android.widget.Button;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AddEducationFragment extends Fragment {
+public class AddInfoFragment extends Fragment {
 
     Button btnNext;
 
-    public AddEducationFragment() {
+
+    public AddInfoFragment() {
         // Required empty public constructor
     }
 
@@ -28,14 +29,15 @@ public class AddEducationFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_add_education, container, false);
-        btnNext=view.findViewById(R.id.btnnextToAward);
+        View view= inflater.inflate(R.layout.fragment_add_info, container, false);
+
+        btnNext=view.findViewById(R.id.btnNextToIntro);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-                fragmentTransition.replace(R.id.fragment_container,new AddAwardFragment());
+                fragmentTransition.replace(R.id.fragment_container,new AddIntroFragment());
                 fragmentTransition.commit();
             }
         });

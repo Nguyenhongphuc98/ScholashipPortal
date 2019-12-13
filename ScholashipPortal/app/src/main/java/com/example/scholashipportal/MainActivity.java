@@ -15,6 +15,8 @@ import java.security.SecureRandom;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean isInfoCreated=false;
+
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
 
@@ -23,6 +25,11 @@ public class MainActivity extends AppCompatActivity {
     private ScholashipDetailFragment mScholashipDetailFragment;
     private InforFragment mInfoFragment;
     private AddEducationFragment mAddEduFragment;
+    private InfoEmptyFragment mInfoEmptyFracment;
+    private FavoriteFragment mFavoriteFragment;
+    private AddAwardFragment mAddAwardFracment;
+    private AddInfoFragment mAddInfoFracment;
+    private AddIntroFragment mAddIntroFracment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +43,13 @@ public class MainActivity extends AppCompatActivity {
         mSearchResulfFragment=new SearchResultFragment();
         mScholashipDetailFragment=new ScholashipDetailFragment();
         mInfoFragment=new InforFragment();
+        mFavoriteFragment=new FavoriteFragment();
+
         mAddEduFragment=new AddEducationFragment();
+        mInfoEmptyFracment=new InfoEmptyFragment();
+        mAddAwardFracment=new AddAwardFragment();
+        mAddInfoFracment=new AddInfoFragment();
+        mAddIntroFracment=new AddIntroFragment();
 
         MatchView();
         SetEventBottomNavBar();
@@ -57,10 +70,17 @@ public class MainActivity extends AppCompatActivity {
                         ReplaceFragment(mHomeFragment);
                         return true;
                     case R.id.action_favorite:
-                        ReplaceFragment(mSearchResulfFragment);
+                        ReplaceFragment(mFavoriteFragment);
                         return true;
                     case R.id.action_info:
-                        ReplaceFragment(mInfoFragment);
+                        if(isInfoCreated)
+                            ReplaceFragment(mInfoFragment);
+                        else
+                        {
+                            ReplaceFragment(mInfoEmptyFracment);
+                            isInfoCreated=true;
+                        }
+
                         return true;
 
                     case R.id.action_explore:

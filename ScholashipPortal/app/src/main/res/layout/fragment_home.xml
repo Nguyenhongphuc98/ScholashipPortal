@@ -58,18 +58,39 @@
             android:orientation="vertical">
 
 
-            <com.mancj.materialsearchbar.MaterialSearchBar
-                style="@style/MaterialSearchBarLight"
-                app:mt_speechMode="true"
-                app:mt_hint="type your text"
-                app:mt_maxSuggestionsCount="10"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/searchBar"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                app:mt_borderlessRippleEnabled="true"
-                />
+                android:id="@+id/constrainsearch">
+
+
+
+                <com.mancj.materialsearchbar.MaterialSearchBar
+                    app:layout_constraintTop_toTopOf="@+id/constrainsearch"
+                    style="@style/MaterialSearchBarLight"
+                    app:mt_speechMode="true"
+                    app:mt_hint="type your text"
+                    app:mt_maxSuggestionsCount="10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/searchBar"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:mt_placeholder="    Search"
+                    app:mt_borderlessRippleEnabled="true"
+                    />
+
+                <ImageView
+                    app:layout_constraintLeft_toLeftOf="@id/searchBar"
+                    app:layout_constraintTop_toTopOf="@id/searchBar"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/icon_search_gray"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
             <LinearLayout

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AddEducationFragment"
+    android:id="@+id/container">
+
+    <LinearLayout
+        android:id="@+id/headerbar"
+        app:layout_constraintTop_toTopOf="@id/container"
+        app:layout_constraintLeft_toLeftOf="@id/container"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#16ABE0"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Điền hồ sơ     "
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/popup"
+        app:layout_constraintTop_toBottomOf="@id/headerbar"
+        app:layout_constraintLeft_toLeftOf="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="25dp"
+        android:layout_margin="25dp"
+        android:elevation="1dp"
+        android:background="@drawable/add_infor_item">
+
+        <TextView
+            android:id="@+id/info"
+            app:layout_constraintTop_toTopOf="@id/popup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="THÔNG TIN CÁ NHÂN"
+            android:gravity="center"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            />
+
+        <Button
+            app:layout_constraintTop_toTopOf="@id/popup"
+            app:layout_constraintRight_toRightOf="@id/popup"
+            android:layout_width="20dp"
+            android:text="1"
+            android:background="@drawable/button_green_corner"
+            android:textColor="#fff"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="@id/popup"
+            app:layout_constraintTop_toBottomOf="@id/info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ngaysinhline"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày sinh:"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:lastBaselineToBottomHeight="5dp"/>
+
+                <EditText
+                    android:id="@+id/ngaysinh"
+                    app:layout_constraintTop_toBottomOf="@id/year2016"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint="dd/MM/yy"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableRight="@drawable/icon_date"
+                    android:paddingRight="20dp"/>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/gioitinhline">
+
+                <TextView
+                    android:id="@+id/gioitinh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Giới tính:"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="@id/gioitinhline"
+                    app:layout_constraintTop_toTopOf="@id/gioitinhline"/>
+
+                <EditText
+                    android:id="@+id/year2016"
+                    android:layout_marginTop="0dp"
+                    app:layout_constraintLeft_toRightOf="@id/gioitinh"
+                    app:layout_constraintTop_toTopOf="@id/gioitinhline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:paddingRight="25dp"
+                    android:paddingLeft="25dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="Nữ"/>
+
+                <ImageView
+                    app:layout_constraintRight_toRightOf="@id/year2016"
+                    app:layout_constraintTop_toTopOf="@id/year2016"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/icon_right_gray"/>
+
+                <ImageView
+                    app:layout_constraintLeft_toLeftOf="@id/year2016"
+                    app:layout_constraintTop_toTopOf="@id/year2016"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/icon_left_gray"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <EditText
+                android:id="@+id/sonha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Số nhà - đường"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/thanhpho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Thành phố"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/sdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Số điện thoại"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:hint="Email"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/btnNextToIntro"
+            app:layout_constraintBottom_toBottomOf="@id/popup"
+            app:layout_constraintLeft_toLeftOf="@id/popup"
+            android:layout_marginBottom="40dp"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:background="@drawable/button_green_corner"
+            android:text="Tiếp tục"
+            android:textColor="#fff"
+            android:textAllCaps="false"
+            android:layout_marginLeft="50dp"
+            android:layout_height="38dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="@id/container"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="1"
+            android:textColor="#fff"
+            android:background="@drawable/button_green_corner"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="2"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="3"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:background="#c4c4c4"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:text="4"
+            android:textColor="#fff"
+            android:background="@drawable/count_scholar_background"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
