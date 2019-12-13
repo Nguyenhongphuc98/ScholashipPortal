@@ -129,6 +129,7 @@
         app:layout_constraintBottom_toBottomOf="@id/container"
         android:gravity="center"
         android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
         android:layout_height="wrap_content">
 
         <Button
@@ -141,38 +142,38 @@
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="2"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="3"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="4"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
     </LinearLayout>
 

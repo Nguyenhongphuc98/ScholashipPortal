@@ -83,6 +83,7 @@
             android:text="2016"/>
 
         <ImageView
+            android:id="@+id/yearNext"
             app:layout_constraintRight_toRightOf="@id/year2016"
             app:layout_constraintTop_toTopOf="@id/year2016"
             android:layout_width="20dp"
@@ -91,6 +92,7 @@
             android:src="@drawable/icon_right_gray"/>
 
         <ImageView
+            android:id="@+id/yearPre"
             app:layout_constraintLeft_toLeftOf="@id/year2016"
             app:layout_constraintTop_toTopOf="@id/year2016"
             android:layout_width="20dp"
@@ -142,6 +144,7 @@
     <LinearLayout
         app:layout_constraintBottom_toBottomOf="@id/container"
         android:gravity="center"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -155,14 +158,14 @@
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="2"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
         <View
             android:layout_width="30dp"

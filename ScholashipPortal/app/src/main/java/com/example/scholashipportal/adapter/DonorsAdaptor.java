@@ -13,7 +13,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.example.scholashipportal.CompaniInfoFragment;
+import com.example.scholashipportal.GlobalSuport;
 import com.example.scholashipportal.R;
+import com.example.scholashipportal.ScholashipDetailFragment;
 
 public class DonorsAdaptor extends ArrayAdapter {
 
@@ -44,7 +47,7 @@ public class DonorsAdaptor extends ArrayAdapter {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,"go to donor",Toast.LENGTH_LONG).show();
+                GlobalSuport.ReplaceFragment(new CompaniInfoFragment());
             }
         });
 

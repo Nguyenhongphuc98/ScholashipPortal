@@ -5,13 +5,18 @@ import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.scholashipportal.adapter.DonorsAdaptor;
 import com.example.scholashipportal.adapter.ScholashipCardAdaptor;
@@ -40,6 +45,8 @@ public class HomeFragment extends Fragment {
     private DonorsAdaptor donorsAdaptor;
     private ListView lvDonors;
 
+    ImageView iconSearch;
+
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -55,6 +62,7 @@ public class HomeFragment extends Fragment {
         lvDonors=view.findViewById(R.id.lvDonors);
         recyclerView=view.findViewById(R.id.rvCards);
         recyclerViewNew=view.findViewById(R.id.rvCardsNew);
+        iconSearch=view.findViewById(R.id.iconSearch);
 
 
         lastSearches=new ArrayList<String>();
@@ -90,6 +98,8 @@ public class HomeFragment extends Fragment {
 
             }
         });
+
+
 
         return view;
     }

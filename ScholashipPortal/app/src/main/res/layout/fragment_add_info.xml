@@ -122,7 +122,7 @@
                     app:layout_constraintTop_toTopOf="@id/gioitinhline"/>
 
                 <EditText
-                    android:id="@+id/year2016"
+                    android:id="@+id/etgioitinh"
                     android:layout_marginTop="0dp"
                     app:layout_constraintLeft_toRightOf="@id/gioitinh"
                     app:layout_constraintTop_toTopOf="@id/gioitinhline"
@@ -135,16 +135,18 @@
                     android:text="Nữ"/>
 
                 <ImageView
-                    app:layout_constraintRight_toRightOf="@id/year2016"
-                    app:layout_constraintTop_toTopOf="@id/year2016"
+                    android:id="@+id/nextGioiTinh"
+                    app:layout_constraintRight_toRightOf="@id/etgioitinh"
+                    app:layout_constraintTop_toTopOf="@id/etgioitinh"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
                     android:src="@drawable/icon_right_gray"/>
 
                 <ImageView
-                    app:layout_constraintLeft_toLeftOf="@id/year2016"
-                    app:layout_constraintTop_toTopOf="@id/year2016"
+                    android:id="@+id/preGioiTinh"
+                    app:layout_constraintLeft_toLeftOf="@id/etgioitinh"
+                    app:layout_constraintTop_toTopOf="@id/etgioitinh"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_marginTop="8dp"
@@ -224,6 +226,7 @@
         app:layout_constraintBottom_toBottomOf="@id/container"
         android:gravity="center"
         android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
         android:layout_height="wrap_content">
 
         <Button
@@ -236,26 +239,26 @@
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="2"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
         <View
             android:layout_width="30dp"
             android:layout_height="2dp"
-            android:background="#c4c4c4"/>
+            android:background="@color/green"/>
 
         <Button
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:text="3"
             android:textColor="#fff"
-            android:background="@drawable/count_scholar_background"/>
+            android:background="@drawable/button_green_corner"/>
 
         <View
             android:layout_width="30dp"

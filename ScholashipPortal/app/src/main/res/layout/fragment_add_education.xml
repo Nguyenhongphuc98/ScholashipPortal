@@ -112,6 +112,7 @@
             android:text="2016"/>
 
         <ImageView
+            android:id="@+id/fromNext"
             app:layout_constraintRight_toRightOf="@id/from2016"
             app:layout_constraintTop_toTopOf="@id/from2016"
             android:layout_width="20dp"
@@ -120,6 +121,7 @@
             android:src="@drawable/icon_right_gray"/>
 
         <ImageView
+            android:id="@+id/fromPre"
             app:layout_constraintLeft_toLeftOf="@id/from2016"
             app:layout_constraintTop_toTopOf="@id/from2016"
             android:layout_width="20dp"
@@ -154,6 +156,7 @@
             android:text="2018"/>
 
         <ImageView
+            android:id="@+id/toNext"
             app:layout_constraintRight_toRightOf="@id/to2018"
             app:layout_constraintTop_toTopOf="@id/to2018"
             android:layout_width="20dp"
@@ -162,6 +165,7 @@
             android:src="@drawable/icon_right_gray"/>
 
         <ImageView
+            android:id="@+id/toPre"
             app:layout_constraintLeft_toLeftOf="@id/to2018"
             app:layout_constraintTop_toTopOf="@id/to2018"
             android:layout_width="20dp"

@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 
 /**
@@ -18,6 +20,9 @@ import android.widget.Button;
 public class AddEducationFragment extends Fragment {
 
     Button btnNext;
+    EditText from;
+    EditText to;
+    ImageView fromNext,fromPre,toNext,toPre;
 
     public AddEducationFragment() {
         // Required empty public constructor
@@ -31,6 +36,14 @@ public class AddEducationFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_add_education, container, false);
         btnNext=view.findViewById(R.id.btnnextToAward);
 
+        from=view.findViewById(R.id.from2016);
+        fromNext=view.findViewById(R.id.fromNext);
+        fromPre=view.findViewById(R.id.fromPre);
+
+        to=view.findViewById(R.id.to2018);
+        toNext=view.findViewById(R.id.toNext);
+        toPre=view.findViewById(R.id.toPre);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,7 +53,42 @@ public class AddEducationFragment extends Fragment {
             }
         });
 
+        addEvent();
         return view;
+    }
+
+    void addEvent(){
+        fromNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int val=Integer.parseInt(from.getText().toString())+1;
+                from.setText(String.valueOf(val));
+            }
+        });
+
+        fromPre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int val=Integer.parseInt(from.getText().toString())-1;
+                from.setText(String.valueOf(val));
+            }
+        });
+
+        toNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int val=Integer.parseInt(to.getText().toString())+1;
+                to.setText(String.valueOf(val));
+            }
+        });
+
+        toPre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int val=Integer.parseInt(to.getText().toString())-1;
+                to.setText(String.valueOf(val));
+            }
+        });
     }
 
 }

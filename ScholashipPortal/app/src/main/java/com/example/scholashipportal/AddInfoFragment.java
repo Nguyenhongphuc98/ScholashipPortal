@@ -10,6 +10,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 
 /**
@@ -18,6 +20,9 @@ import android.widget.Button;
 public class AddInfoFragment extends Fragment {
 
     Button btnNext;
+
+    ImageView next,pre;
+    EditText gioitinh;
 
 
     public AddInfoFragment() {
@@ -32,6 +37,9 @@ public class AddInfoFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_add_info, container, false);
 
         btnNext=view.findViewById(R.id.btnNextToIntro);
+        next=view.findViewById(R.id.nextGioiTinh);
+        pre=view.findViewById(R.id.preGioiTinh);
+        gioitinh=view.findViewById(R.id.etgioitinh);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,6 +47,17 @@ public class AddInfoFragment extends Fragment {
                 FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
                 fragmentTransition.replace(R.id.fragment_container,new AddIntroFragment());
                 fragmentTransition.commit();
+            }
+        });
+
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(gioitinh.getText().toString().equals("Nữ"))
+                    gioitinh.setText(String.valueOf("Nam"));
+                    else
+                        gioitinh.setText("Nữ");
             }
         });
 
