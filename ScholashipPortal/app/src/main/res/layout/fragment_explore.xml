@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="15dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Khám phá"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textSize="38sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đừng bỏ lỡ những bài viết hữu ích"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/story_card"
+            android:id="@+id/card1">
+
+            <ImageView
+                android:id="@+id/imgitem1"
+                app:layout_constraintTop_toTopOf="@id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/study"
+                android:background="@drawable/story_card"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title1"
+                app:layout_constraintTop_toBottomOf="@id/imgitem1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="Du học Úc"/>
+
+            <TextView
+                android:id="@+id/content1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Chắc bạn cũng biết. Du học là 1 vấn. đề rất chi là nan giải đúng không nà..."/>
+
+            <Button
+                android:id="@+id/btnDocThem"
+                app:layout_constraintRight_toRightOf="@id/card1"
+                app:layout_constraintTop_toBottomOf="@id/content1"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/custom_buttom"
+                android:textColor="#16ABE0"
+                android:layout_marginRight="10dp"
+                android:text="Đọc tiếp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/story_card"
+            android:id="@+id/card2">
+
+            <ImageView
+                android:id="@+id/imgitem2"
+                app:layout_constraintTop_toTopOf="@id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/study"
+                android:background="@drawable/story_card"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title2"
+                app:layout_constraintTop_toBottomOf="@id/imgitem2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="Du học Úc"/>
+
+            <TextView
+                android:id="@+id/content2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Chắc bạn cũng biết. Du học là 1 vấn. đề rất chi là nan giải đúng không nà..."/>
+
+            <Button
+                android:id="@+id/btnDocThem2"
+                app:layout_constraintRight_toRightOf="@id/card2"
+                app:layout_constraintTop_toBottomOf="@id/content2"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/custom_buttom"
+                android:textColor="#16ABE0"
+                android:layout_marginRight="10dp"
+                android:text="Đọc tiếp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/story_card"
+            android:id="@+id/card3">
+
+            <ImageView
+                android:id="@+id/imgitem3"
+                app:layout_constraintTop_toTopOf="@id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:src="@drawable/study"
+                android:background="@drawable/story_card"
+                android:scaleType="centerCrop"/>
+
+            <TextView
+                android:id="@+id/title3"
+                app:layout_constraintTop_toBottomOf="@id/imgitem3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="Du học Úc"/>
+
+            <TextView
+                android:id="@+id/content3"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/title3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Chắc bạn cũng biết. Du học là 1 vấn. đề rất chi là nan giải đúng không nà..."/>
+
+            <Button
+                android:id="@+id/btnDocThem3"
+                app:layout_constraintRight_toRightOf="@id/card3"
+                app:layout_constraintTop_toBottomOf="@id/content3"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/custom_buttom"
+                android:textColor="#16ABE0"
+                android:layout_marginRight="10dp"
+                android:text="Đọc tiếp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>

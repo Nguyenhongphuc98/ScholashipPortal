@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private AddEducationFragment mAddEduFragment;
     private InfoEmptyFragment mInfoEmptyFracment;
     private FavoriteFragment mFavoriteFragment;
+    private ExploreFragment mExploreFtacment;
     private AddAwardFragment mAddAwardFracment;
     private AddInfoFragment mAddInfoFracment;
     private AddIntroFragment mAddIntroFracment;
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         mScholashipDetailFragment=new ScholashipDetailFragment();
         mInfoFragment=new InforFragment();
         mFavoriteFragment=new FavoriteFragment();
+        mExploreFtacment=new ExploreFragment();
 
         mAddEduFragment=new AddEducationFragment();
         mInfoEmptyFracment=new InfoEmptyFragment();
@@ -84,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.action_explore:
-                        ReplaceFragment(mAddEduFragment);
+                        ReplaceFragment(mExploreFtacment);
                         return true;
                 }
                 return false;
