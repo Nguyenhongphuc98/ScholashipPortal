@@ -11,7 +11,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
 
+import com.example.scholashipportal.adapter.FavoriteAdaptor;
 import com.example.scholashipportal.adapter.SearchResultAdaptor;
+import com.example.scholashipportal.model.ScholashipFavorite;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -23,8 +28,11 @@ public class FavoriteFragment extends Fragment {
     Button btnSave;
 
     ListView listView;
-    SearchResultAdaptor adaptor;
-    String data[]={"a","a","a","a","a","a","a","a"};
+    FavoriteAdaptor adaptor;
+    List<ScholashipFavorite> data;
+
+    FavoriteAdaptor saveAdaptor;
+    List<ScholashipFavorite> saveData;
 
 
     public FavoriteFragment() {
@@ -42,8 +50,19 @@ public class FavoriteFragment extends Fragment {
         btnFavotire=view.findViewById(R.id.btnYeuThich);
         btnSave=view.findViewById(R.id.btnDaLuu);
 
+        data= new ArrayList<>();
+        data.add(new ScholashipFavorite(R.drawable.nokia,"Ươm mầm trí tuệ","Du học","22/12/2022","new"));
+        data.add(new ScholashipFavorite(R.drawable.apple,"Vượt khó học tốt","Hỗ trợ học phí","01/02/2052","Hot"));
+        adaptor=new FavoriteAdaptor(getContext(),data);
 
-        adaptor=new SearchResultAdaptor(getContext(),data);
+        saveData= new ArrayList<>();
+        saveData.add(new ScholashipFavorite(R.drawable.apple,"Thắp sáng tương lai","Hỗ trợ học phí","01/02/2052","Hot"));
+        saveData.add(new ScholashipFavorite(R.drawable.tiki,"Vượt khó học tốt","Hỗ trợ học phí","21/02/2052","new"));
+        saveData.add(new ScholashipFavorite(R.drawable.nokia,"Tài năng trẻ","Du học","22/10/2025","new"));
+        saveData.add(new ScholashipFavorite(R.drawable.micro,"Vừ A Dính","Hỗ trợ học phí","01/02/2050","Hot"));
+        saveData.add(new ScholashipFavorite(R.drawable.micro,"Ươm mầm trí tuệ","Du học","22/12/2022","new"));
+        saveAdaptor=new FavoriteAdaptor(getContext(),saveData);
+
         listView.setAdapter(adaptor);
 
         addEvent();
@@ -60,6 +79,8 @@ public class FavoriteFragment extends Fragment {
 
                 btnSave.setBackgroundResource(R.drawable.button_white);
                 btnSave.setTextColor(getResources().getColor(R.color.green));
+                listView.setAdapter(adaptor);
+                adaptor.notifyDataSetChanged();
             }
         });
 
@@ -71,6 +92,8 @@ public class FavoriteFragment extends Fragment {
 
                 btnFavotire.setBackgroundResource(R.drawable.button_white);
                 btnFavotire.setTextColor(getResources().getColor(R.color.green));
+                listView.setAdapter(saveAdaptor);
+                saveAdaptor.notifyDataSetChanged();
             }
         });
     }

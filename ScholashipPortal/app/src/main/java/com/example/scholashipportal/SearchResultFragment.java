@@ -11,7 +11,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.example.scholashipportal.adapter.FavoriteAdaptor;
 import com.example.scholashipportal.adapter.SearchResultAdaptor;
+import com.example.scholashipportal.model.ScholashipFavorite;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -20,8 +25,8 @@ import com.example.scholashipportal.adapter.SearchResultAdaptor;
 public class SearchResultFragment extends Fragment {
 
     ListView lvSearchResult;
-    SearchResultAdaptor adaptor;
-    String data[]={"a","a","a","a","a","a","a","a"};
+    FavoriteAdaptor adaptor;
+    List<ScholashipFavorite> data;
 
     public SearchResultFragment() {
         // Required empty public constructor
@@ -35,7 +40,13 @@ public class SearchResultFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_search_result, container, false);
 
         lvSearchResult=view.findViewById(R.id.lvSearchResult);
-        adaptor=new SearchResultAdaptor(getContext(),data);
+
+        data= new ArrayList<>();
+        data.add(new ScholashipFavorite(R.drawable.apple,"Ươm mầm trí tuệ","Hỗ trợ học phí","23/05/2020","new"));
+        data.add(new ScholashipFavorite(R.drawable.nokia,"Thắp sáng ước mơ","Du học","22/12/2022","new"));
+        data.add(new ScholashipFavorite(R.drawable.icon_itun,"Vượt khó học tốt","Hỗ trợ học phí","01/02/2052","Hot"));
+        data.add(new ScholashipFavorite(R.drawable.tiki,"Ước mơ tuổi trẻ","Du học","04/06/2022","new"));
+        adaptor=new FavoriteAdaptor(getContext(),data);
         lvSearchResult.setAdapter(adaptor);
 
 

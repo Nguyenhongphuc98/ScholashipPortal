@@ -72,7 +72,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="297px"
                 android:layout_margin="20dp"
                 android:background="@drawable/infor_item"
                 android:id="@+id/education"
@@ -114,7 +114,7 @@
                         app:layout_constraintTop_toTopOf="@id/topbar"
                         android:layout_width="20dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon_down_green"
+                        android:src="@drawable/icon_up"
                         android:layout_height="20dp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,7 +187,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="345px"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="0dp"
@@ -231,7 +231,7 @@
                         app:layout_constraintTop_toTopOf="@id/topbar_award"
                         android:layout_width="20dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon_down_green"
+                        android:src="@drawable/icon_up"
                         android:layout_height="20dp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -323,7 +323,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="360px"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
@@ -367,7 +367,7 @@
                         app:layout_constraintTop_toTopOf="@id/topbar_info"
                         android:layout_width="20dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon_down_green"
+                        android:src="@drawable/icon_up"
                         android:layout_height="20dp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -472,7 +472,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="265px"
                 android:layout_marginRight="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
@@ -516,7 +516,7 @@
                         app:layout_constraintTop_toTopOf="@id/topbar_intro"
                         android:layout_width="20dp"
                         android:layout_marginRight="10dp"
-                        android:src="@drawable/icon_down_green"
+                        android:src="@drawable/icon_up"
                         android:layout_height="20dp"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -543,6 +543,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
+                android:id="@+id/btnSuaHoSo"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
                 android:text="Sửa hồ sơ"

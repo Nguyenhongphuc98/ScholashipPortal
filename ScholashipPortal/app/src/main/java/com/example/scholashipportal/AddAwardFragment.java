@@ -24,6 +24,9 @@ public class AddAwardFragment extends Fragment {
     ImageView nextYear,preYear;
     EditText year;
 
+    Button btnCountAward,btnPlusAward;
+    int countAward=0;
+    EditText thanhTich;
 
     public AddAwardFragment() {
         // Required empty public constructor
@@ -41,12 +44,14 @@ public class AddAwardFragment extends Fragment {
         preYear=view.findViewById(R.id.yearPre);
         year=view.findViewById(R.id.year2016);
 
+        btnCountAward=view.findViewById(R.id.countAward);
+        btnPlusAward=view.findViewById(R.id.plusAward);
+        thanhTich=view.findViewById(R.id.thanhtichdatduoc);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-                fragmentTransition.replace(R.id.fragment_container,new AddInfoFragment());
-                fragmentTransition.commit();
+                GlobalSuport.ReplaceFragment(new AddInfoFragment());
             }
         });
 
@@ -63,6 +68,15 @@ public class AddAwardFragment extends Fragment {
             public void onClick(View v) {
                 int val=Integer.parseInt(year.getText().toString())-1;
                 year.setText(String.valueOf(val));
+            }
+        });
+
+        btnPlusAward.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countAward++;
+                btnCountAward.setText(countAward+"");
+                thanhTich.setText("");
             }
         });
 

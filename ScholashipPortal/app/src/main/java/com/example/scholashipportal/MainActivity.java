@@ -95,8 +95,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void ReplaceFragment(Fragment fragment){
-        FragmentTransaction fragmentTransition=getSupportFragmentManager().beginTransaction();
-        fragmentTransition.replace(R.id.fragment_container,fragment);
-        fragmentTransition.commit();
+        GlobalSuport.ReplaceFragment(fragment);
     }
 }

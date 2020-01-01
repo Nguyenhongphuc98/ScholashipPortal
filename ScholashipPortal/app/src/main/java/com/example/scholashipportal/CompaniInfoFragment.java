@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 
 /**
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
  */
 public class CompaniInfoFragment extends Fragment {
 
+    ImageView ivBack;
 
     public CompaniInfoFragment() {
         // Required empty public constructor
@@ -25,7 +27,17 @@ public class CompaniInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_compani_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_compani_info, container, false);
+        ivBack = view.findViewById(R.id.btnBack_combapy);
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(HomeFragment.Instance());
+            }
+        });
+
+        return  view;
     }
 
 }

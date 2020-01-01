@@ -1,6 +1,7 @@
 package com.example.scholashipportal;
 
 
+import android.animation.ObjectAnimator;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 
@@ -46,6 +47,19 @@ public class HomeFragment extends Fragment {
     private ListView lvDonors;
 
     ImageView iconSearch;
+    ImageView next;
+    ImageView next2;
+
+    int countlist1 = 0;
+    int countlist2 = 0;
+
+    private static HomeFragment instance;
+    public static HomeFragment Instance(){
+        if(instance ==null)
+            instance =new HomeFragment();
+
+        return instance;
+    }
 
     public HomeFragment() {
         // Required empty public constructor
@@ -63,6 +77,8 @@ public class HomeFragment extends Fragment {
         recyclerView=view.findViewById(R.id.rvCards);
         recyclerViewNew=view.findViewById(R.id.rvCardsNew);
         iconSearch=view.findViewById(R.id.iconSearch);
+        next=view.findViewById(R.id.nextScholaship);
+        next2=view.findViewById(R.id.nextScholaship2);
 
 
         lastSearches=new ArrayList<String>();
@@ -99,7 +115,43 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        searchBar.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+//                iconSearch.setVisibility(View.INVISIBLE);
+                if(hasFocus)
+                    Toast.makeText(getContext(),"focus change",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(getContext(),"focus change2",Toast.LENGTH_LONG).show();
+            }
+        });
 
+
+
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                iconSearch.setVisibility(View.INVISIBLE);
+                searchBar.onClick(searchBar);
+            }
+        });
+
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ObjectAnimator animation = ObjectAnimator.ofInt(recyclerView, "scrollX",20);
+//                animation.setDuration(2000);
+//                animation.start();
+                recyclerView.scrollToPosition((++countlist1)%(cards.size()));
+            }
+        });
+
+        next2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recyclerViewNew.scrollToPosition((++countlist2)%(cards.size()));
+            }
+        });
 
         return view;
     }

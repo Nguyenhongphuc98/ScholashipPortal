@@ -9,7 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.example.scholashipportal.R;
@@ -28,6 +30,8 @@ public class InforFragment extends Fragment {
     ConstraintLayout awardLayout;
     ConstraintLayout infoLayout;
     ConstraintLayout introLayout;
+
+    Button btnEditProfile;
 
 
     public InforFragment() {
@@ -50,6 +54,8 @@ public class InforFragment extends Fragment {
         infoLayout=view.findViewById(R.id.info);
         introLayout=view.findViewById(R.id.intro);
 
+        btnEditProfile = view.findViewById(R.id.btnSuaHoSo);
+
         setEvent();
 
         return view;
@@ -59,32 +65,71 @@ public class InforFragment extends Fragment {
         eduExpan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                eduLayout.setMaxHeight(60);
-                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
+                ViewGroup.LayoutParams layout = eduLayout.getLayoutParams();
+                if(eduLayout.getHeight() > 60){
+                    layout.height = 60;
+                    eduLayout.setLayoutParams(layout);
+                    eduExpan.setImageResource(R.drawable.icon_down_green);
+                }else{
+                    layout.height = 297;
+                    eduLayout.setLayoutParams(layout);
+                    eduExpan.setImageResource(R.drawable.icon_up);
+                }
             }
         });
 
         award.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                awardLayout.setMaxHeight(60);
-                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
+                ViewGroup.LayoutParams layout = awardLayout.getLayoutParams();
+                if(awardLayout.getHeight() >60){
+                    layout.height = 60;
+                    awardLayout.setLayoutParams(layout);
+                    award.setImageResource(R.drawable.icon_down_green);
+                }else {
+                    layout.height = 345;
+                    awardLayout.setLayoutParams(layout);
+                    award.setImageResource(R.drawable.icon_up);
+                }
             }
         });
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                infoLayout.setMaxHeight(60);
-                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
+                ViewGroup.LayoutParams layout = infoLayout.getLayoutParams();
+                if(infoLayout.getHeight() >60) {
+                    layout.height = 60;
+                    infoLayout.setLayoutParams(layout);
+                    info.setImageResource(R.drawable.icon_down_green);
+                } else {
+                    layout.height = 360;
+                    infoLayout.setLayoutParams(layout);
+                    info.setImageResource(R.drawable.icon_up);
+                }
             }
         });
 
         intro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                introLayout.setMaxHeight(60);
-                Toast.makeText(getContext(),"clicked",Toast.LENGTH_SHORT).show();
+                ViewGroup.LayoutParams layout = introLayout.getLayoutParams();
+                if(introLayout.getHeight() >60){
+                    layout.height = 60;
+                    introLayout.setLayoutParams(layout);
+                    intro.setImageResource(R.drawable.icon_down_green);
+                } else {
+                    layout.height = 265;
+                    introLayout.setLayoutParams(layout);
+                    intro.setImageResource(R.drawable.icon_up);
+                }
+            }
+        });
+
+        btnEditProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new AddEducationFragment());
             }
         });
     }

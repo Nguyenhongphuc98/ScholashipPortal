@@ -103,6 +103,8 @@
                     android:layout_marginRight="10dp"
                     android:drawableRight="@drawable/icon_date"
                     android:paddingRight="20dp"/>
+
+
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

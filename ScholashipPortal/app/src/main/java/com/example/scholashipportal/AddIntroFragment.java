@@ -36,9 +36,7 @@ public class AddIntroFragment extends Fragment {
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-                fragmentTransition.replace(R.id.fragment_container,new InforFragment());
-                fragmentTransition.commit();
+               GlobalSuport.ReplaceFragment(new InforFragment());
             }
         });
 

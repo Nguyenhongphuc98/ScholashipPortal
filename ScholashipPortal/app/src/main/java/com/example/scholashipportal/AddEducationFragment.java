@@ -9,9 +9,14 @@ import androidx.fragment.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -23,6 +28,16 @@ public class AddEducationFragment extends Fragment {
     EditText from;
     EditText to;
     ImageView fromNext,fromPre,toNext,toPre;
+
+    EditText tenToChucDaoTao;
+    EditText gpa;
+
+    int countEdu=0;
+    Button plusEducation;
+    Button countEducation;
+
+    List<String> heDaoTaoArr;
+    Spinner spinner;
 
     public AddEducationFragment() {
         // Required empty public constructor
@@ -44,12 +59,26 @@ public class AddEducationFragment extends Fragment {
         toNext=view.findViewById(R.id.toNext);
         toPre=view.findViewById(R.id.toPre);
 
+        plusEducation=view.findViewById(R.id.plusEducation);
+        countEducation=view.findViewById(R.id.countEducation);
+
+        tenToChucDaoTao=view.findViewById(R.id.tentochucdaotao);
+        gpa=view.findViewById(R.id.gpa);
+
+        heDaoTaoArr= new ArrayList<>();
+        heDaoTaoArr.add("Chọn hệ đào tạo");
+        heDaoTaoArr.add("Chính quy");
+        heDaoTaoArr.add("Bổ túc");
+        heDaoTaoArr.add("Cao đẳng liên thông");
+        heDaoTaoArr.add("Đào tạo tại chức");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_spinner_dropdown_item,heDaoTaoArr);
+        spinner=view.findViewById(R.id.spinerHeDaoTao);
+        spinner.setAdapter(adapter);
+
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-                fragmentTransition.replace(R.id.fragment_container,new AddAwardFragment());
-                fragmentTransition.commit();
+                GlobalSuport.ReplaceFragment(new AddAwardFragment());
             }
         });
 
@@ -87,6 +116,16 @@ public class AddEducationFragment extends Fragment {
             public void onClick(View v) {
                 int val=Integer.parseInt(to.getText().toString())-1;
                 to.setText(String.valueOf(val));
+            }
+        });
+
+        plusEducation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                countEdu++;
+                countEducation.setText(countEdu+"");
+                tenToChucDaoTao.setText("");
+                gpa.setText("");
             }
         });
     }

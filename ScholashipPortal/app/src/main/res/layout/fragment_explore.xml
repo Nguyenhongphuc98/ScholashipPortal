@@ -33,73 +33,28 @@
             android:layout_marginTop="15dp"
             android:paddingBottom="10dp"
             android:background="@drawable/story_card"
-            android:id="@+id/card1">
-
-            <ImageView
-                android:id="@+id/imgitem1"
-                app:layout_constraintTop_toTopOf="@id/card1"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@drawable/study"
-                android:background="@drawable/story_card"
-                android:scaleType="centerCrop"/>
-
-            <TextView
-                android:id="@+id/title1"
-                app:layout_constraintTop_toBottomOf="@id/imgitem1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#000"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="20dp"
-                android:text="Du học Úc"/>
-
-            <TextView
-                android:id="@+id/content1"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="15dp"
-                app:layout_constraintTop_toBottomOf="@id/title1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lines="2"
-                android:text="Chắc bạn cũng biết. Du học là 1 vấn. đề rất chi là nan giải đúng không nà..."/>
-
-            <Button
-                android:id="@+id/btnDocThem"
-                app:layout_constraintRight_toRightOf="@id/card1"
-                app:layout_constraintTop_toBottomOf="@id/content1"
-                android:layout_width="60dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:textSize="10dp"
-                android:textAllCaps="false"
-                android:textAlignment="center"
-                android:background="@drawable/custom_buttom"
-                android:textColor="#16ABE0"
-                android:layout_marginRight="10dp"
-                android:text="Đọc tiếp"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:paddingBottom="10dp"
-            android:background="@drawable/story_card"
             android:id="@+id/card2">
 
-            <ImageView
-                android:id="@+id/imgitem2"
+            <androidx.cardview.widget.CardView
                 app:layout_constraintTop_toTopOf="@id/card2"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@drawable/study"
-                android:background="@drawable/story_card"
-                android:scaleType="centerCrop"/>
+                app:layout_constraintLeft_toLeftOf="@id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/imgCard2">
+                <ImageView
+                    android:id="@+id/imgitem2"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/study"
+                    android:background="@drawable/story_card"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/title2"
-                app:layout_constraintTop_toBottomOf="@id/imgitem2"
+                app:layout_constraintTop_toBottomOf="@id/imgCard2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -141,18 +96,26 @@
             android:background="@drawable/story_card"
             android:id="@+id/card3">
 
-            <ImageView
-                android:id="@+id/imgitem3"
+            <androidx.cardview.widget.CardView
                 app:layout_constraintTop_toTopOf="@id/card3"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:src="@drawable/study"
-                android:background="@drawable/story_card"
-                android:scaleType="centerCrop"/>
+                app:layout_constraintLeft_toLeftOf="@id/card3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/imgCard3">
+                <ImageView
+                    android:id="@+id/imgitem3"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/study"
+                    android:background="@drawable/story_card"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/title3"
-                app:layout_constraintTop_toBottomOf="@id/imgitem3"
+                app:layout_constraintTop_toBottomOf="@id/imgCard3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
@@ -174,6 +137,67 @@
                 android:id="@+id/btnDocThem3"
                 app:layout_constraintRight_toRightOf="@id/card3"
                 app:layout_constraintTop_toBottomOf="@id/content3"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:background="@drawable/custom_buttom"
+                android:textColor="#16ABE0"
+                android:layout_marginRight="10dp"
+                android:text="Đọc tiếp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/story_card"
+            android:id="@+id/card1">
+
+            <androidx.cardview.widget.CardView
+                app:layout_constraintTop_toTopOf="@id/card1"
+                app:layout_constraintLeft_toLeftOf="@id/card1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:id="@+id/imgCard1">
+                <ImageView
+                    android:id="@+id/imgitem1"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:src="@drawable/study"
+                    android:background="@drawable/story_card"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/title1"
+                app:layout_constraintTop_toBottomOf="@id/imgCard1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="20dp"
+                android:text="Du học Úc"/>
+
+            <TextView
+                android:id="@+id/content1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toBottomOf="@id/title1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="2"
+                android:text="Chắc bạn cũng biết. Du học là 1 vấn. đề rất chi là nan giải đúng không nà..."/>
+
+            <Button
+                android:id="@+id/btnDocThem"
+                app:layout_constraintRight_toRightOf="@id/card1"
+                app:layout_constraintTop_toBottomOf="@id/content1"
                 android:layout_width="60dp"
                 android:layout_height="25dp"
                 android:layout_gravity="center"

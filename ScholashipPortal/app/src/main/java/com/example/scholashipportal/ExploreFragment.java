@@ -20,6 +20,13 @@ public class ExploreFragment extends Fragment {
     Button btndoc1,btndoc2,btndoc3;
     ExploreDetailFragment mExploreDetail;
 
+    private static ExploreFragment instance;
+    public static ExploreFragment Instance(){
+        if(instance == null)
+            instance = new ExploreFragment();
+        return instance;
+    }
+
     public ExploreFragment() {
         // Required empty public constructor
     }
@@ -67,9 +74,8 @@ public class ExploreFragment extends Fragment {
 
 
     private void ReplaceFragment(Fragment fragment){
-        FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-        fragmentTransition.replace(R.id.fragment_container,fragment);
-        fragmentTransition.commit();
+       GlobalSuport.ReplaceFragment(fragment
+       );
     }
 
 }

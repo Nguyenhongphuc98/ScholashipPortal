@@ -35,9 +35,7 @@ public class InfoEmptyFragment extends Fragment {
         btnTao.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction fragmentTransition=getFragmentManager().beginTransaction();
-                fragmentTransition.replace(R.id.fragment_container,new AddEducationFragment());
-                fragmentTransition.commit();
+                GlobalSuport.ReplaceFragment(new AddEducationFragment());
             }
         });
 

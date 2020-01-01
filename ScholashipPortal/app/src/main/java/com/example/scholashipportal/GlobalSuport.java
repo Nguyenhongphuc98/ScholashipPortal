@@ -12,6 +12,7 @@ public class GlobalSuport {
 
     public static void ReplaceFragment(Fragment fragment){
         FragmentTransaction fragmentTransition=activity.getSupportFragmentManager().beginTransaction();
+        fragmentTransition.setCustomAnimations(R.anim.fade_in_left,R.anim.fade_out);
         fragmentTransition.replace(R.id.fragment_container,fragment);
         fragmentTransition.commit();
     }

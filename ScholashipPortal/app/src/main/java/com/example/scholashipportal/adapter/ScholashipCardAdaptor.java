@@ -4,7 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,6 +25,7 @@ public class ScholashipCardAdaptor extends
         RecyclerView.Adapter<ScholashipCardAdaptor.ViewHolder> {
 
     Context context;
+    private int lastPosition = -1;
 
     @NonNull
     @Override
@@ -49,6 +53,9 @@ public class ScholashipCardAdaptor extends
         TextView deadline = holder.deadline;
         deadline.setText(card.getmDeadline());
 
+        holder.logoCompany.setImageResource(card.getAvatarOfCompany());
+        holder.banner.setImageResource(card.getCover());
+
         Button button = holder.btnXem;
         button.setOnClickListener(new View.OnClickListener(){
 
@@ -57,11 +64,25 @@ public class ScholashipCardAdaptor extends
                 GlobalSuport.ReplaceFragment(new ScholashipDetailFragment());
             }
         });
+
+        setAnimation(holder.banner,position);
     }
 
     @Override
     public int getItemCount() {
         return mCards.size();
+    }
+
+    private void setAnimation(View viewToAnimate, int position) {
+        // If the bound view wasn't previously displayed on screen, it's animated
+        Animation animation;
+        if (position < lastPosition)
+            animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+        else
+            animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_out_right);
+
+        viewToAnimate.startAnimation(animation);
+        lastPosition = position;
     }
 
     // Provide a direct reference to each of the views within a data item
@@ -72,6 +93,8 @@ public class ScholashipCardAdaptor extends
         public TextView nameTextView;
         public TextView deadline;
         public Button btnXem;
+        public ImageView logoCompany;
+        public ImageView banner;
 
         // We also create a constructor that accepts the entire item row
         // and does the view lookups to find each subview
@@ -83,6 +106,8 @@ public class ScholashipCardAdaptor extends
             nameTextView = (TextView) itemView.findViewById(R.id.scholarshipname);
             deadline = (TextView) itemView.findViewById(R.id.deadline);
             btnXem = (Button) itemView.findViewById(R.id.btnXemHB);
+            logoCompany = (ImageView) itemView.findViewById(R.id.logoToChuc);
+            banner = (ImageView) itemView.findViewById(R.id.bannerScholaship);
         }
     }
 

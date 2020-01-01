@@ -1,43 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    >
+    android:layout_gravity="center">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
 
-        <ImageView
+        <androidx.cardview.widget.CardView
+            app:layout_constraintTop_toTopOf="@id/card1"
+            app:layout_constraintLeft_toLeftOf="@id/card1"
             android:layout_width="match_parent"
-            android:layout_height="190dp"
-            android:src="@drawable/banner"
-            android:padding="0dp"
-            />
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/imgCard1">
+            <ImageView
+                android:id="@+id/bannerScholaship"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:src="@drawable/scholarship_cover3"
+                android:scaleType="centerCrop"
+                android:padding="0dp"
+                />
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/icon_right"
-            android:layout_marginTop="65dp"
-            android:layout_marginLeft="300dp"
-            />
+
+
+
     </FrameLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/infoContainer">
 
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:background="@drawable/icon_company"
-            android:layout_marginTop="5dp"/>
+
+        <androidx.cardview.widget.CardView
+            app:layout_constraintTop_toTopOf="@id/infoContainer"
+            app:layout_constraintLeft_toLeftOf="@id/infoContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/logoToChuc1">
+            <ImageView
+                android:id="@+id/logoToChuc"
+                app:layout_constraintLeft_toLeftOf="@+id/infoContainer"
+                app:layout_constraintTop_toTopOf="@+id/infoContainer"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:background="@drawable/icon_company"
+                />
+        </androidx.cardview.widget.CardView>
+
 
         <RelativeLayout
+            app:layout_constraintLeft_toRightOf="@id/logoToChuc1"
+            app:layout_constraintTop_toTopOf="@id/infoContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
@@ -59,16 +87,19 @@
 
         <Button
             android:id="@+id/btnXemHB"
+            app:layout_constraintRight_toRightOf="@id/infoContainer"
+            app:layout_constraintTop_toTopOf="@id/infoContainer"
             android:layout_width="60dp"
             android:layout_height="25dp"
-            android:layout_marginLeft="110dp"
             android:layout_gravity="center"
             android:textSize="10dp"
+            android:layout_marginTop="10dp"
             android:textAllCaps="false"
             android:textAlignment="center"
             android:background="@drawable/custom_buttom"
             android:textColor="#16ABE0"
             android:padding="0dp"
-            android:text="Lưu"/>
-    </LinearLayout>
+            android:layout_marginRight="20dp"
+            android:text="Xem ngay"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
