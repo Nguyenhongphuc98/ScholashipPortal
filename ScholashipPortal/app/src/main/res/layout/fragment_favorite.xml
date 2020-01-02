@@ -55,7 +55,7 @@
                 android:textAllCaps="false"
                 android:shadowColor="#fff"
                 android:background="@drawable/button_white"
-                android:text="Đã lưu"/>
+                android:text="Đã ứng tuyển"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

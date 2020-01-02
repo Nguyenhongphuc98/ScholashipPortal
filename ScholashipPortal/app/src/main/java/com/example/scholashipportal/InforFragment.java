@@ -9,6 +9,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -61,6 +63,15 @@ public class InforFragment extends Fragment {
         return view;
     }
 
+    void AddAnimation(View view){
+        Animation animation;
+
+        animation = AnimationUtils.loadAnimation(getContext(), android.R.anim.fade_in);
+        animation.setDuration(2000);
+        view.startAnimation(animation);
+    }
+
+
     void setEvent(){
         eduExpan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +86,9 @@ public class InforFragment extends Fragment {
                     eduLayout.setLayoutParams(layout);
                     eduExpan.setImageResource(R.drawable.icon_up);
                 }
+
+                AddAnimation(eduLayout);
+                AddAnimation(awardLayout);
             }
         });
 
@@ -91,6 +105,8 @@ public class InforFragment extends Fragment {
                     awardLayout.setLayoutParams(layout);
                     award.setImageResource(R.drawable.icon_up);
                 }
+                AddAnimation(awardLayout);
+                AddAnimation(infoLayout);
             }
         });
 
@@ -107,6 +123,8 @@ public class InforFragment extends Fragment {
                     infoLayout.setLayoutParams(layout);
                     info.setImageResource(R.drawable.icon_up);
                 }
+                AddAnimation(infoLayout);
+                AddAnimation(introLayout);
             }
         });
 
@@ -123,6 +141,8 @@ public class InforFragment extends Fragment {
                     introLayout.setLayoutParams(layout);
                     intro.setImageResource(R.drawable.icon_up);
                 }
+                AddAnimation(introLayout);
+                AddAnimation(btnEditProfile);
             }
         });
 
@@ -133,5 +153,6 @@ public class InforFragment extends Fragment {
             }
         });
     }
+
 
 }

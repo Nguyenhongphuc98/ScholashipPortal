@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 
 /**
@@ -19,6 +20,7 @@ public class ScholashipDetailFragment extends Fragment {
     ImageView ivBack;
     Button btnApply;
     Button btnSave;
+    RelativeLayout companyArea;
 
 
     public ScholashipDetailFragment() {
@@ -34,6 +36,7 @@ public class ScholashipDetailFragment extends Fragment {
         ivBack = view.findViewById(R.id.scholashipdetail_back);
         btnApply = view.findViewById(R.id.btnApply);
         btnSave = view.findViewById(R.id.btnSave);
+        companyArea = view.findViewById(R.id.companyArea);
 
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,13 @@ public class ScholashipDetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 btnSave.setEnabled(false);
+            }
+        });
+
+        companyArea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new CompaniInfoFragment());
             }
         });
         return view;
