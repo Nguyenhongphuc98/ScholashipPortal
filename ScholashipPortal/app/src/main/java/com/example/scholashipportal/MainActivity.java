@@ -69,12 +69,15 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
                     case R.id.action_home:
+                        GlobalSuport.preIsFavoriteList = false;
                         ReplaceFragment(mHomeFragment);
                         return true;
                     case R.id.action_favorite:
+                        GlobalSuport.preIsFavoriteList = true;
                         ReplaceFragment(mFavoriteFragment);
                         return true;
                     case R.id.action_info:
+                        GlobalSuport.preIsFavoriteList = false;
                         if(isInfoCreated)
                             ReplaceFragment(mInfoFragment);
                         else
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.action_explore:
+                        GlobalSuport.preIsFavoriteList = false;
                         ReplaceFragment(mExploreFtacment);
                         return true;
                 }

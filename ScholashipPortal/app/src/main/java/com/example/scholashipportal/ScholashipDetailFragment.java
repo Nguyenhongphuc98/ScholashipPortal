@@ -41,7 +41,10 @@ public class ScholashipDetailFragment extends Fragment {
         ivBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GlobalSuport.ReplaceFragment(HomeFragment.Instance());
+                if (GlobalSuport.preIsFavoriteList)
+                    GlobalSuport.ReplaceFragment(new FavoriteFragment());
+                else
+                    GlobalSuport.ReplaceFragment(HomeFragment.Instance());
             }
         });
 

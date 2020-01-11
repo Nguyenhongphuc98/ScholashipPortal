@@ -21,7 +21,7 @@ public class AddAwardFragment extends Fragment {
 
     Button btnNext;
 
-    ImageView nextYear,preYear;
+    ImageView nextYear,preYear,back;
     EditText year;
 
     Button btnCountAward,btnPlusAward;
@@ -47,6 +47,7 @@ public class AddAwardFragment extends Fragment {
         btnCountAward=view.findViewById(R.id.countAward);
         btnPlusAward=view.findViewById(R.id.plusAward);
         thanhTich=view.findViewById(R.id.thanhtichdatduoc);
+        back=view.findViewById(R.id.backtoEdu);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +78,13 @@ public class AddAwardFragment extends Fragment {
                 countAward++;
                 btnCountAward.setText(countAward+"");
                 thanhTich.setText("");
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new AddEducationFragment());
             }
         });
 

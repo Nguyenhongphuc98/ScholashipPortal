@@ -14,12 +14,14 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:background="#16ABE0"
-        android:layout_height="45dp">
+        android:layout_height="50dp">
 
         <ImageView
+            android:id="@+id/backtoInfo"
             android:layout_gravity="center"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="8dp"
             android:src="@drawable/icon_back"/>
 
         <TextView

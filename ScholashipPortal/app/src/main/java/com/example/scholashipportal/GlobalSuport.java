@@ -9,6 +9,8 @@ import androidx.fragment.app.FragmentTransaction;
 public class GlobalSuport {
 
     public static FragmentActivity activity;
+    public static boolean preIsFavoriteList = false;
+    public static boolean preIsFavoriteApply = false;
 
     public static void ReplaceFragment(Fragment fragment){
         FragmentTransaction fragmentTransition=activity.getSupportFragmentManager().beginTransaction();

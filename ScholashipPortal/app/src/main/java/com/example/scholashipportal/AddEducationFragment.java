@@ -27,7 +27,7 @@ public class AddEducationFragment extends Fragment {
     Button btnNext;
     EditText from;
     EditText to;
-    ImageView fromNext,fromPre,toNext,toPre;
+    ImageView fromNext,fromPre,toNext,toPre, back;
 
     EditText tenToChucDaoTao;
     EditText gpa;
@@ -54,6 +54,7 @@ public class AddEducationFragment extends Fragment {
         from=view.findViewById(R.id.from2016);
         fromNext=view.findViewById(R.id.fromNext);
         fromPre=view.findViewById(R.id.fromPre);
+        back=view.findViewById(R.id.backtoProfile);
 
         to=view.findViewById(R.id.to2018);
         toNext=view.findViewById(R.id.toNext);
@@ -126,6 +127,13 @@ public class AddEducationFragment extends Fragment {
                 countEducation.setText(countEdu+"");
                 tenToChucDaoTao.setText("");
                 gpa.setText("");
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new InforFragment());
             }
         });
     }

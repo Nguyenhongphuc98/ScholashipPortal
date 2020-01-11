@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 
 /**
@@ -18,6 +19,7 @@ import android.widget.Button;
 public class AddIntroFragment extends Fragment {
 
     Button btnDone;
+    ImageView back;
 
 
     public AddIntroFragment() {
@@ -32,11 +34,19 @@ public class AddIntroFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_add_intro, container, false);
 
         btnDone=view.findViewById(R.id.hoanthanh);
+        back=view.findViewById(R.id.backtoInfo);
 
         btnDone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                GlobalSuport.ReplaceFragment(new InforFragment());
+            }
+        });
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new AddInfoFragment());
             }
         });
 

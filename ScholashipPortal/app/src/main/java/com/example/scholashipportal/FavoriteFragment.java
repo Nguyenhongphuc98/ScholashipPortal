@@ -67,6 +67,8 @@ public class FavoriteFragment extends Fragment {
 
         addEvent();
 
+        if(GlobalSuport.preIsFavoriteApply ==true)
+            btnSave.performClick();
         return view;
     }
 
@@ -74,6 +76,7 @@ public class FavoriteFragment extends Fragment {
         btnFavotire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                GlobalSuport.preIsFavoriteApply = false;
                 btnFavotire.setBackgroundResource(R.drawable.button_green_corner);
                 btnFavotire.setTextColor(getResources().getColor(R.color.white));
 
@@ -87,6 +90,7 @@ public class FavoriteFragment extends Fragment {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                GlobalSuport.preIsFavoriteApply = true;
                 btnSave.setBackgroundResource(R.drawable.button_green_corner);
                 btnSave.setTextColor(getResources().getColor(R.color.white));
 

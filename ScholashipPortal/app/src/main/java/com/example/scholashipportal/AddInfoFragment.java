@@ -27,7 +27,7 @@ public class AddInfoFragment extends Fragment {
 
     Button btnNext;
 
-    ImageView next,pre;
+    ImageView next,pre, back;
     EditText gioitinh;
     EditText ngaySinh;
 
@@ -50,6 +50,7 @@ public class AddInfoFragment extends Fragment {
         pre=view.findViewById(R.id.preGioiTinh);
         gioitinh=view.findViewById(R.id.etgioitinh);
         ngaySinh=view.findViewById(R.id.ngaysinh);
+        back=view.findViewById(R.id.backtoAward);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +93,12 @@ public class AddInfoFragment extends Fragment {
             }
         });
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GlobalSuport.ReplaceFragment(new AddAwardFragment());
+            }
+        });
         return view;
     }
 
